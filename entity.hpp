@@ -11,7 +11,11 @@ public:
 
 	char symbol;
 
-	Entity(int x_in, int y_in, char symbol_in) : x_pos(x_in), y_pos(y_in), symbol(symbol_in) {}
+	char standingOnSurfaceType;
+
+	Entity(int x_in, int y_in, char symbol_in) : x_pos(x_in), y_pos(y_in), symbol(symbol_in) {
+		standingOnSurfaceType = '.';
+	}
 
 	void displayEntity();
 };
