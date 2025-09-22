@@ -11,6 +11,7 @@
 #include "core.hpp"
 #include "entity.hpp"
 #include "player.hpp"
+#include "room.hpp"
 
 
 int main()
@@ -22,8 +23,15 @@ int main()
 
     man.displayEntity();
 
+    readCharAtXY(0, 0);
+
+    Room room(0, 0, 20, 20);
+
+    room.drawRoom();
+
     while ((ch = _getch()) != 81) {
         man.handlePlayerInput(ch);
+
     }
 
 
