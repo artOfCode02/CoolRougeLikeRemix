@@ -4,7 +4,9 @@
 
 class Player : public Entity {
 public:
-	Player(int x, int y) : Entity(x, y, '@') {}
+	Player(int x, int y) : Entity(x, y, '@', '.') {
+		displayEntity();
+	}
 
 	void handlePlayerInput(int inputKey);
 

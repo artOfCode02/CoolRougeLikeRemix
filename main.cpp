@@ -6,31 +6,32 @@
 #include <iostream>
 #include <Windows.h>
 #include <conio.h>
+#include <array>
 
 
 #include "core.hpp"
 #include "entity.hpp"
 #include "player.hpp"
 #include "room.hpp"
+#include "level.hpp"
+#include "debug.hpp"
 
 
-int main()
-{
- 
+int main() {
+    
+    Level level1(1);
+
+
+    Player user(10, 10);
+
+
     int ch;
-
-    Player man(5, 5);
-
-    man.displayEntity();
-
-    readCharAtXY(0, 0);
-
-    Room room(0, 0, 20, 20);
-
-    room.drawRoom();
-
     while ((ch = _getch()) != 81) {
-        man.handlePlayerInput(ch);
+
+        user.handlePlayerInput(ch);
+
+        //displayDebugInfo(user, level1);
+
 
     }
 
